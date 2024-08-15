@@ -31,6 +31,8 @@ import org.eclipse.swt.widgets.Text;
  */
 
 //创建分支
+
+//分支添加
 public class MySQLPanel extends Composite {
 
 	private Label hostLbl = null;
