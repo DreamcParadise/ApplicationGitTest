@@ -35,7 +35,9 @@ import org.eclipse.swt.widgets.Text;
 //主干添加
 //分支添加
 
+
 //不是最新的更新
+//在线更新
 public class MySQLPanel extends Composite {
 
 	private Label hostLbl = null;
