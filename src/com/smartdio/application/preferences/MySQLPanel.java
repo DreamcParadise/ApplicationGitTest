@@ -27,7 +27,7 @@ import org.eclipse.swt.widgets.Text;
 
 /**
  * @author Smart
- *
+ * 修改处
  */
 public class MySQLPanel extends Composite {
 
