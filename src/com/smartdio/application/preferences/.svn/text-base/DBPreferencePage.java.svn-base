@@ -1,0 +1,108 @@
+/*
+ * 朗日信息技术有限公司版权所有 2001-2005}
+ * 本源代码是朗日信息技术有限公司的财产,
+ * 受《著作权法》、《中华人民共和国软件保护条例》及《国际版权公约》保护, 
+ * 任何企业或者个人未经朗日信息技术有限公司的明确书面授权许可,
+ * 不得复制、销售本源代码给非本企业人员,不得对本源代码及其拷贝进行修改, 
+ * 不得在任何公共媒体上散播本源代码，不得把本源代码编译成目标软件,
+ * 不得复制本源代码全部或部分到其他非本企业的软件产品中。
+ * 
+ * 
+ * Copyright (c) 2001-2005 by Luminary Technology LTD. China. 
+ * All rights reserved.
+ * 
+ * 创建日期 2005-7-5
+ * @author Smart
+ */
+package com.smartdio.application.preferences;
+
+import org.eclipse.jface.preference.*;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPreferencePage;
+
+import com.smartdio.application.Activator;
+
+/**
+ * @author Smart
+ * 
+ *         TODO To change the template for this generated type comment go to
+ *         Window - Preferences - Java - Code Style - Code Templates
+ */
+public class DBPreferencePage extends PreferencePage implements
+		IWorkbenchPreferencePage {
+
+	DBPreferencePanel dbPanel;
+
+	/**
+	 * 
+	 */
+	public DBPreferencePage() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param title
+	 * @param image
+	 */
+	public DBPreferencePage(String title, ImageDescriptor image) {
+		super(title, image);
+		// TODO Auto-generated constructor stub
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.eclipse.jface.preference.PreferencePage#createContents(org.eclipse
+	 * .swt.widgets.Composite)
+	 */
+	protected Control createContents(Composite parent) {
+		dbPanel = new DBPreferencePanel(parent, SWT.NONE);
+		dbPanel.loadPreference();
+		return dbPanel;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.eclipse.jface.preference.PreferencePage#performApply()
+	 */
+	protected void performApply() {
+		dbPanel.storePreference();
+		super.performApply();
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.eclipse.jface.preference.PreferencePage#performOk()
+	 */
+	public boolean performOk() {
+		dbPanel.storePreference();
+		return super.performOk();
+	}
+
+	/**
+	 * @param title
+	 */
+	public DBPreferencePage(String title) {
+		super(title);
+		// TODO Auto-generated constructor stub
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.eclipse.ui.IWorkbenchPreferencePage#init(org.eclipse.ui.IWorkbench)
+	 */
+	public void init(IWorkbench workbench) {
+		setPreferenceStore(Activator.getDefault().getPreferenceStore());
+	}
+
+}

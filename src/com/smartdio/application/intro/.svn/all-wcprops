@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/35/trunk/com.smartdio.application/src/com/smartdio/application/intro
+END
+Application.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/35/trunk/com.smartdio.application/src/com/smartdio/application/intro/Application.java
+END
+ApplicationWorkbenchWindowAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/35/trunk/com.smartdio.application/src/com/smartdio/application/intro/ApplicationWorkbenchWindowAdvisor.java
+END
+Perspective.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/35/trunk/com.smartdio.application/src/com/smartdio/application/intro/Perspective.java
+END
+ApplicationActionBarAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/35/trunk/com.smartdio.application/src/com/smartdio/application/intro/ApplicationActionBarAdvisor.java
+END
+ApplicationWorkbenchAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/35/trunk/com.smartdio.application/src/com/smartdio/application/intro/ApplicationWorkbenchAdvisor.java
+END
